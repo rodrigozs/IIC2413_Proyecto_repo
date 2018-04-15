@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 APR 2018 17:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 APR 2018 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -618,13 +618,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-<Diagrama_ER.png, id=1, 620.81938pt x 351.3125pt>
+<Diagrama_ER.png, id=1, 618.31pt x 350.30875pt>
 File: Diagrama_ER.png Graphic file (type png)
  <use Diagrama_ER.png>
 Package pdftex.def Info: Diagrama_ER.png used on input line 37.
-(pdftex.def)             Requested size: 281.85587pt x 159.499pt.
-
-[1
+(pdftex.def)             Requested size: 281.85587pt x 159.69006pt.
+ [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Diagr
 ama_ER.png>] [2] (./e2grupo23.aux
@@ -644,7 +643,7 @@ b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on e2grupo23.pdf (2 pages, 191812 bytes).
+Output written on e2grupo23.pdf (2 pages, 199071 bytes).
 PDF statistics:
  34 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream

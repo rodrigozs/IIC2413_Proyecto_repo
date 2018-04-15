@@ -1,0 +1,34 @@
+% Consulta 1
+usuario = 'id'
+fecha = ''
+
+SELECT T.rec_id, T.manda_id, T.cantidad, T.fecha
+FROM Transacciones as T, Usuarios as U
+WHERE U.id = T.manda_id
+AND U.id = usuario
+AND T.fecha = fecha
+UNION
+SELECT T.rec_id, T.manda_id, T.cantidad, T.fecha
+FROM Transacciones as T, Usuarios as U
+WHERE U.id = T.rec_id
+AND U.id = usuario
+AND T.fecha = fecha
+
+% Consulta 2
+fecha = ''
+zorzales = ''
+SELECT PH.z_en_usd*zorzales, PH.z_en_clp*zorzales
+FROM PreciosHistoricos AS PH
+WHERE PH.fecha = fecha
+
+% Consulta 3
+pais = ''
+SELECT *
+FROM Usuarios AS U
+WHERE U.pais = pais
+
+% Consulta 4
+ano_mes_pasado = ''
+SELECT MEAN(PH.z_en_usd), MEAN(PH.z_en_clp)
+FROM PreciosHistoricos AS PH
+WHERE PH.fecha LIKE ano_mes_pasado+'___'
