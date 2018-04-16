@@ -1,6 +1,6 @@
 % Consulta 1
-usuario = 'id'
-fecha = ''
+usuario = '7'
+fecha = '2018-03-19'
 
 SELECT T.rec_id, T.manda_id, T.cantidad, T.fecha
 FROM Transacciones as T, Usuarios as U
@@ -15,32 +15,35 @@ AND U.id = usuario
 AND T.fecha = fecha
 
 % Consulta 2
-fecha = ''
-zorzales = ''
+fecha = '2018-03-22'
+zorzales = '10'
 SELECT PH.z_en_usd*zorzales, PH.z_en_clp*zorzales
 FROM PreciosHistoricos AS PH
 WHERE PH.fecha = fecha
 
 % Coonsulta 3
-usuario = ''
+usuario = '3'
 SELECT T.rec_id, T.manda_id, T.cantidad, T.fecha
 FROM Transacciones AS T, Usuarios AS U
-WHERE U.id = T.manda_id
-AND U.id = usuario
+WHERE (U.id = T.manda_id OR U.id = T.rec_id)
+AND U.id = usurio
 AND T.fecha >= ALL(SELECT T2.fecha
-                  FROM Transacciones AS T2)
+                  FROM Transacciones AS T2, Usuarios AS U2
+                  WHERE (U2.id = T2.manda_id OR U2.id = T2.rec_id)
+                  AND U2.id = usuario)
 
 % Consulta 4
-pais = ''
+pais = 'chile'
 SELECT *
 FROM Usuarios AS U
 WHERE U.pais = pais
 
 % Consulta 5
 ano_mes_pasado = ''
-SELECT MEAN(PH.z_en_usd), MEAN(PH.z_en_clp)
+SELECT AVG(PH.en_usd), AVG(PH.en_clp)
 FROM PreciosHistoricos AS PH
-WHERE PH.fecha LIKE ano_mes_pasado+'___'
+WHERE PH.fecha >= ano_mes_pasado+'-01'
+AND PH.fecha <= ano_mes_pasado+'-31'
 
 % Consulta 6
 a)
